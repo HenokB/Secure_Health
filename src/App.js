@@ -2,10 +2,10 @@ import React, { useRef, useState } from 'react';
 import './App.css';
 
 import firebase from 'firebase/app';
-import 'firebase/firestore';
+
 import 'firebase/auth';
 import 'firebase/analytics';
-
+import 'firebase/firestore';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
@@ -20,7 +20,7 @@ firebase.initializeApp({
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
-const analytics = firebase.analytics();
+
 
 
 function App() {
@@ -71,9 +71,6 @@ function SignIn() {
     //   <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
       
     // </div>
-    // <div className='telegram'>
-    // <button className="tg">ChatBot💬</button>
-    // </div> */}
     // </>
   )
 
@@ -114,19 +111,12 @@ function ChatRoom() {
 
   return (<>
     <main>
-
-      {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
-
-      <span ref={dummy}></span>
-
+    {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
+    <span ref={dummy}></span>
     </main>
-
     <form onSubmit={sendMessage}>
-
-      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Write a message" />
-
-      <button type="submit" disabled={!formValue}>Send</button>
-
+    <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Write a message" />
+    <button type="submit" disabled={!formValue}>Send</button>
     </form>
   </>)
 }
@@ -139,8 +129,8 @@ function ChatMessage(props) {
 
   return (<>
     <div className={`message ${messageClass}`}>
-      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
-      <p>{text}</p>
+    <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
+    <p>{text}</p>
     </div>
   </>)
 }
