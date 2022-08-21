@@ -16,3 +16,9 @@ Then add all those api keys in the correct positions. The first run the python b
 
 Finally to your project directory and run
 - `npm install`
+
+### This is the landing page
+![Screenshot 2022-08-21 131618](https://user-images.githubusercontent.com/46082799/185804605-1080b737-115a-4290-8f1b-eb9b4bed0ccc.jpg)
+
+### This is the bot page
+![Screenshot 2022-08-21 131554](https://user-images.githubusercontent.com/46082799/185804617-53dc86cf-621d-4777-9ea4-58f97d311140.jpg)
