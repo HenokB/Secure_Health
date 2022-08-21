@@ -64,6 +64,7 @@ function SignIn() {
      <button className='tg'><a href="http://t.me/diseasedetectorbot">ChatBot💬</a></button>
      </div>
      <h1 className='redtitle'>"Healthy citizens are the greatest asset any country can have"</h1>
+     <p className="footer">Made with ☕️ Henok 2022</p>
     </div>
     // <>
     
