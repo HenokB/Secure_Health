@@ -1,8 +1,9 @@
 import cohere
 import telebot
 
-API_KEY = "5511119306:AAFrtfQCrrgJDLPrxTQuF4OTmIgNbrNxUOE"
+from dotenv import load_dotenv
 
+load_dotenv()
 bot = telebot.TeleBot(API_KEY)
 print("Bot is running!")
 @bot.message_handler(commands=['start'])
@@ -38,7 +39,7 @@ def disease_request(message):
 @bot.message_handler(func=disease_request)
 def send_disease(message):
     gg = message.text.split()[2:]
-    co = cohere.Client('zgwXd870rQz3cVQyzJqRcQITzKsIR8lx873qlmsZ')
+    co = cohere.Client(Cohere_key)
     response = co.generate(
         model='xlarge',
         prompt=f"This program will generate deasease name based on symptoms -- Chest Pain\nAortic Dissection\n\nChest Tightness (Tightness in Chest)\nHeart Attack\n\nChest Tightness (Tightness in Chest)\nHeart Attacks in Women\n\nChronic Pain\nInsomnia\n\nDiarrhea, Dizziness\nJet Lag\n\nExcessive Yawning (Yawning)\nNarcolepsy\n\nExcessive Yawning (Yawning)\nSleep and Sleep Disorders in Children and Teenagers\n\nDistended Stomach (Abdominal Distention)\nAscites\n\nBleeding and Enlarged finger tips, Blue colored skin and Enlarged finger tips, Brittle hair, Change in hair texture, Curved fingernails and Dry skin\nEmphysema\n\nBreast Discharge, Breast Pain\nBreastfeeding\n\nShoulder Pain\nRadiculopathy\n\nSore Tongue\nBurning Mouth Syndrome \n\nChest Pain\nBath Salts\n\n{gg}\n",
