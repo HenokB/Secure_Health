@@ -1,4 +1,4 @@
-# Secure Health
+# Secure Health🍎
 
 To clone this application locally you need:
 - Cohere API Key
