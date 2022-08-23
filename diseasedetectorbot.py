@@ -13,13 +13,13 @@ def greet(message):
 def hello(message):
   bot.send_message(message.chat.id, """Available Commands :-
   `i got` - to get the recommendation of games from NLP
-  /about - This bot is made by 3 hackers for A Hack a Day 2
+  /about - About
 """
 
 
 @bot.message_handler(commands=['about'])
 def greet(message):
-  bot.send_message(message.chat.id, "This bot is made by 3 hackers for A Hack a Day 2")
+  bot.send_message(message.chat.id, "Hello, I'm Henok https://linktr.ee/henokademtew")
 
 
 def disease_request(message):
