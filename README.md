@@ -17,6 +17,22 @@ Then add all those api keys in the correct positions. The first run the python b
 Finally to your project directory and run
 - `npm install`
 
+
+Getting Started
+
+Run the development server:
+
+```bash
+npm start
+# or
+yarn start
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+
 ### This is the landing page
 ![Screenshot 2022-08-21 131618](https://user-images.githubusercontent.com/46082799/185804605-1080b737-115a-4290-8f1b-eb9b4bed0ccc.jpg)
 
